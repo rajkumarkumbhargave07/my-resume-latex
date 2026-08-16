@@ -1,0 +1,216 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%--------------------------------------------------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING------------------------------
+\begin{center}
+{\Huge \scshape Rajkumar Kumbhargave} \\ \vspace{2pt}
+\large Java Backend Developer | Spring Boot | Microservices | REST APIs | Enterprise Automation \\ \vspace{4pt}
+\small
+\faPhone\ +91 95118 54644 \hspace{10pt}
+\faEnvelope\ \href{mailto:rajkumarkumbhargave07@gmail.com}{rajkumarkumbhargave07@gmail.com} \hspace{10pt}
+\faLinkedin\ \href{https://www.linkedin.com/in/rajkumar-kumbhargave-192689210/}{LinkedIn}
+\end{center}
+
+
+%-------------------------------------------------------
+\section{Professional Summary}
+  \resumeSubHeadingListStart
+{
+Java Backend Developer with 3+ years of experience delivering enterprise automation solutions and customer-specific backend applications using Java, Spring Boot, REST APIs, and SQL databases. Experienced in designing scalable backend services, extending AI-powered enterprise platforms, and integrating systems including ServiceNow, Azure, SAP, and Jira. Delivered 100+ enterprise automation use cases while leading technical initiatives and building secure, maintainable backend solutions using Spring Data JPA, Hibernate.
+}
+ \resumeSubHeadingListEnd
+
+
+
+%-----------PROGRAMMING SKILLS--------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+\item \textbf{Languages}: Java, SQL, Python, Groovy, JavaScript, Bash, PowerShell
+\item \textbf{Backend}: Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs, Microservices
+\item \textbf{Databases}: PostgreSQL, MSSQL, Neo4j
+\item \textbf{Tools}: Git, GitLab, Azure DevOps, Docker, Postman, Selenium, JUnit
+\item \textbf{Concepts}: OOP, Collections, Multithreading, DSA, Agile/Scrum
+\end{itemize}
+
+
+ 
+%-----------EXPERIENCE----------------------------------------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Tata Consultancy Services}{October 2023 -- Present}
+{Solution Engineer \textbar{} Digitate AI and Enterprise Automation}{Pune, Maharashtra}
+
+\resumeItemListStart
+%--------------------------------------
+
+\resumeItem{Developed customer-specific backend solutions by extending the \textbf{ignio} Enterprise Automation platform using \textbf{Java, Spring Boot, REST APIs, Groovy, Python, and Selenium} to automate enterprise IT operations and business workflows.}
+
+\resumeItem{Designed and implemented \textbf{75+ enterprise automation solutions} across Infrastructure, SAP, Databases, Azure, AKS, Monitoring, Security, and enterprise applications, improving operational efficiency through self-healing and workflow automation.}
+
+\resumeItem{Built reusable integrations with \textbf{ServiceNow, Azure Storage, Microsoft Teams, SolarWinds, Oracle, SAP, and enterprise REST APIs}, enabling incident management, alert processing, health checks, credential management, and cross-platform orchestration.}
+
+\resumeItem{Designed and developed \textbf{Spring Boot REST services}, reusable backend components, and Python/Selenium-based UI automation for enterprise applications where APIs were unavailable.}
+
+\resumeItem{Led a \textbf{7-member squad} during the P10 Program, mentoring engineers and coordinating the end-to-end delivery of enterprise automation solutions for strategic customers.}
+
+\resumeItem{Successfully onboarded a global pharmaceutical enterprise by designing and delivering three Proof-of-Concept automation solutions across SAP, Infrastructure, and Database domains, accelerating platform adoption.}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{SGGS Institute of Engineering \& Technology, Nanded}{2019 -- 2023}
+{B.Tech in Electronics \& Telecommunication Engineering \textbar\ CGPA: \textbf{8.6/10}}{Nanded, Maharashtra}
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS--------------------------------------
+\section{Projects}
+
+\resumeProjectHeading
+{\textbf{AutoOps - Autonomous IT Operations Platform} $|$ \emph{Java, Spring Boot, React, Neo4j, PostgreSQL, JWT, REST APIs}}
+
+\resumeItemListStart
+
+\resumeItem{Designed and developed an enterprise-grade IT automation platform using a modular monolith architecture with \textbf{Spring Boot}, \textbf{React}, and \textbf{PostgreSQL}, providing a scalable foundation for enterprise IT operations.}
+
+\resumeItem{Implemented a \textbf{Neo4j-based infrastructure topology engine} to model IT assets as a graph, enabling dynamic hierarchy traversal, relationship mapping, entity search, and blueprint visualization through optimized graph queries.}
+
+\resumeItem{Developed a pluggable \textbf{capability execution framework} supporting PowerShell, Bash, and SQL executors, enabling automated operations across Windows, Linux, and database environments through reusable workflow components.}
+
+\resumeItem{Built backend modules for \textbf{alert ingestion, work item lifecycle management, capability repository, credential vault, authentication (JWT), and ITSM integration}, leveraging REST APIs, PostgreSQL, and versioned automation packages.}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Intelligent Video Surveillance System} $|$ \emph{Python, Django, OpenCV, YOLO, REST APIs}}
+{}
+%-----------------------------------------------------------------------
+\resumeItemListStart
+
+\resumeItem{Developed a real-time intelligent video surveillance system using \textbf{Python} and \textbf{Django} to process live CCTV streams for automated event detection and monitoring.}
+
+\resumeItem{Integrated computer vision models to detect \textbf{Vehicle Detction, ANPR Detection, trespassing, Human detection and safety violations}, enabling automated security monitoring with real-time alerts.}
+
+\resumeItemListEnd
+
+
+
+
+
+%==========Acheivements=======================================
+%-------------------------------------------------------------
+
+\section{Achievements}
+\begin{itemize}[leftmargin=0.3in, itemsep=2pt]
+
+\item Achieved \textbf{consecutive A-band performance ratings (4+/5)} for consistently delivering high-quality enterprise automation solutions and exceeding performance expectations.
+
+\item Received the \textbf{Star of the Month}, \textbf{On-the-Spot Award}, and \textbf{Elevate Wings Award} for technical excellence, innovation, and continuous upskilling in Java and Spring Boot.
+
+\item Earned the \textbf{Best Team Award} and received multiple customer recognitions for successful project delivery, technical leadership, and client satisfaction.
+
+\end{itemize}
+
+\vspace{8pt}
+
+\end{document}

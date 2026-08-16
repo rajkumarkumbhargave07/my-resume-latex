@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajkumar Kumbhargave · Portfolio</title>
+  <!-- Font Awesome 5 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef3f9;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      padding: 2rem 1rem;
+      color: #13273e;
+      line-height: 1.5;
+    }
+
+    .resume-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.25);
+      padding: 2rem 2rem 1.8rem;
+      transition: all 0.15s;
+    }
+
+    /* ----- HEADER (exactly as original order) ----- */
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #e3eaf2;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #0a1f36;
+      margin-bottom: 0.2rem;
+    }
+
+    .header .title-line {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1e4a7a;
+      background: #e6eef8;
+      display: inline-block;
+      padding: 0.2rem 1.8rem;
+      border-radius: 40px;
+      margin-bottom: 0.7rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.8rem;
+      font-size: 0.95rem;
+      color: #1a3a5e;
+      margin-top: 0.2rem;
+    }
+
+    .contact-row i {
+      margin-right: 6px;
+      color: #25639e;
+      width: 1.1rem;
+      text-align: center;
+    }
+
+    .contact-row a {
+      color: #1a3a5e;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: 0.15s;
+    }
+
+    .contact-row a:hover {
+      border-bottom-color: #25639e;
+      color: #071a2b;
+    }
+
+    /* ----- SECTION TITLE (order preserved) ----- */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #0a1f36;
+      border-bottom: 3px solid #dce5ef;
+      padding-bottom: 0.3rem;
+      margin: 1.8rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: #25639e;
+      font-size: 1.2rem;
+      width: 1.8rem;
+    }
+
+    /* ----- SUMMARY (exactly as original) ----- */
+    .summary-text {
+      background: #f2f7fd;
+      padding: 0.9rem 1.5rem;
+      border-radius: 20px;
+      font-size: 0.98rem;
+      color: #142b44;
+      border-left: 4px solid #2f74b0;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ----- SKILLS (compact) ----- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.6rem;
+      background: #f8fbfe;
+      padding: 0.8rem 1.2rem;
+      border-radius: 18px;
+      margin-top: 0.2rem;
+    }
+
+    .skills-grid .skill-group {
+      font-size: 0.95rem;
+    }
+
+    .skills-grid .skill-group strong {
+      font-weight: 600;
+      color: #0a2847;
+    }
+
+    /* ----- EXPERIENCE / EDUCATION / PROJECTS / ACHIEVEMENTS ----- */
+    .entry {
+      margin-bottom: 1.2rem;
+    }
+
+    .entry-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry-header .title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #0a1f36;
+    }
+
+    .entry-header .sub {
+      font-weight: 500;
+      color: #1e4a7a;
+    }
+
+    .entry-header .date {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #426288;
+      background: #e8eff7;
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+    }
+
+    .entry-sub {
+      font-style: italic;
+      color: #2a4b70;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .entry-desc {
+      padding-left: 0.2rem;
+      list-style: none;
+    }
+
+    .entry-desc li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.25rem;
+      font-size: 0.94rem;
+      color: #182d47;
+    }
+
+    .entry-desc li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #25639e;
+      font-weight: 600;
+    }
+
+    .project-block {
+      background: #f7faff;
+      border-radius: 16px;
+      padding: 0.8rem 1.2rem 0.6rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #e7eef6;
+    }
+
+    .project-block .proj-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #0a1f36;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .project-block .proj-title .tech {
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: #3a6088;
+      background: #e3ecf5;
+      padding: 0.05rem 1rem;
+      border-radius: 30px;
+    }
+
+    .project-block ul {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+
+    .project-block ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.93rem;
+      color: #182d47;
+      margin-bottom: 0.15rem;
+    }
+
+    .project-block ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #25639e;
+    }
+
+    /* achievements list (original style) */
+    .achievement-list {
+      list-style: none;
+      margin-left: 0.2rem;
+      padding-left: 0.2rem;
+    }
+
+    .achievement-list li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.94rem;
+      color: #182d47;
+    }
+
+    .achievement-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #25639e;
+      font-weight: 600;
+    }
+
+    .inline-icon {
+      margin-right: 6px;
+      color: #25639e;
+      width: 1.2rem;
+      text-align: center;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #dce5ef;
+      margin: 0.5rem 0 1rem;
+    }
+
+    /* responsiveness */
+    @media (max-width: 640px) {
+      .resume-card {
+        padding: 1.2rem;
+      }
+      .header h1 {
+        font-size: 2.2rem;
+      }
+      .contact-row {
+        gap: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+      }
+      .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+      }
+      .skills-grid {
+        gap: 0.3rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-card">
+
+    <!-- HEADER (exact order: name, title, contact) -->
+    <div class="header">
+      <h1>Rajkumar Kumbhargave</h1>
+      <div class="title-line">Java Backend Developer | Spring Boot | Microservices | REST APIs | Enterprise Automation</div>
+      <div class="contact-row">
+        <span><i class="fas fa-phone-alt"></i> +91 95118 54644</span>
+        <span><i class="fas fa-envelope"></i> <a href="mailto:rajkumarkumbhargave07@gmail.com">rajkumarkumbhargave07@gmail.com</a></span>
+        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rajkumar-kumbhargave-192689210/" target="_blank">LinkedIn</a></span>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="summary-text">
+      <i class="fas fa-quote-left" style="color:#25639e; margin-right:6px; opacity:0.7;"></i>
+      Java Backend Developer with 3+ years of experience delivering enterprise automation solutions and customer-specific backend applications using Java, Spring Boot, REST APIs, and SQL databases. Experienced in designing scalable backend services, extending AI-powered enterprise platforms, and integrating systems including ServiceNow, Azure, SAP, and Jira. Delivered 100+ enterprise automation use cases while leading technical initiatives and building secure, maintainable backend solutions using Spring Data JPA, Hibernate.
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section-title"><i class="fas fa-code"></i> Technical Skills</div>
+    <div class="skills-grid">
+      <span class="skill-group"><strong>Languages:</strong> Java, SQL, Python, Groovy, JavaScript, Bash, PowerShell</span>
+      <span class="skill-group"><strong>Backend:</strong> Spring Boot, Spring MVC, Spring Data JPA, Hibernate, REST APIs, Microservices</span>
+      <span class="skill-group"><strong>Databases:</strong> PostgreSQL, MSSQL, Neo4j</span>
+      <span class="skill-group"><strong>Tools:</strong> Git, GitLab, Azure DevOps, Docker, Postman, Selenium, JUnit</span>
+      <span class="skill-group"><strong>Concepts:</strong> OOP, Collections, Multithreading, DSA, Agile/Scrum</span>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="title">Tata Consultancy Services</span>
+        <span class="date">October 2023 – Present</span>
+      </div>
+      <div class="entry-sub">Solution Engineer | Digitate AI and Enterprise Automation · Pune, Maharashtra</div>
+      <ul class="entry-desc">
+        <li>Developed customer-specific backend solutions by extending the <strong>ignio</strong> Enterprise Automation platform using <strong>Java, Spring Boot, REST APIs, Groovy, Python, and Selenium</strong> to automate enterprise IT operations and business workflows.</li>
+        <li>Designed and implemented <strong>75+ enterprise automation solutions</strong> across Infrastructure, SAP, Databases, Azure, AKS, Monitoring, Security, and enterprise applications, improving operational efficiency through self-healing and workflow automation.</li>
+        <li>Built reusable integrations with <strong>ServiceNow, Azure Storage, Microsoft Teams, SolarWinds, Oracle, SAP, and enterprise REST APIs</strong>, enabling incident management, alert processing, health checks, credential management, and cross-platform orchestration.</li>
+        <li>Designed and developed <strong>Spring Boot REST services</strong>, reusable backend components, and Python/Selenium-based UI automation for enterprise applications where APIs were unavailable.</li>
+        <li>Led a <strong>7-member squad</strong> during the P10 Program, mentoring engineers and coordinating the end-to-end delivery of enterprise automation solutions for strategic customers.</li>
+        <li>Successfully onboarded a global pharmaceutical enterprise by designing and delivering three Proof-of-Concept automation solutions across SAP, Infrastructure, and Database domains, accelerating platform adoption.</li>
+      </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="title">SGGS Institute of Engineering & Technology, Nanded</span>
+        <span class="date">2019 – 2023</span>
+      </div>
+      <div class="entry-sub">B.Tech in Electronics & Telecommunication Engineering · CGPA: <strong>8.6/10</strong> · Nanded, Maharashtra</div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section-title"><i class="fas fa-folder-open"></i> Projects</div>
+
+    <div class="project-block">
+      <div class="proj-title">
+        <span>AutoOps - Autonomous IT Operations Platform</span>
+        <span class="tech">Java, Spring Boot, React, Neo4j, PostgreSQL, JWT, REST APIs</span>
+      </div>
+      <ul>
+        <li>Designed and developed an enterprise-grade IT automation platform using a modular monolith architecture with <strong>Spring Boot</strong>, <strong>React</strong>, and <strong>PostgreSQL</strong>, providing a scalable foundation for enterprise IT operations.</li>
+        <li>Implemented a <strong>Neo4j-based infrastructure topology engine</strong> to model IT assets as a graph, enabling dynamic hierarchy traversal, relationship mapping, entity search, and blueprint visualization through optimized graph queries.</li>
+        <li>Developed a pluggable <strong>capability execution framework</strong> supporting PowerShell, Bash, and SQL executors, enabling automated operations across Windows, Linux, and database environments through reusable workflow components.</li>
+        <li>Built backend modules for <strong>alert ingestion, work item lifecycle management, capability repository, credential vault, authentication (JWT), and ITSM integration</strong>, leveraging REST APIs, PostgreSQL, and versioned automation packages.</li>
+      </ul>
+    </div>
+
+    <div class="project-block">
+      <div class="proj-title">
+        <span>Intelligent Video Surveillance System</span>
+        <span class="tech">Python, Django, OpenCV, YOLO, REST APIs</span>
+      </div>
+      <ul>
+        <li>Developed a real-time intelligent video surveillance system using <strong>Python</strong> and <strong>Django</strong> to process live CCTV streams for automated event detection and monitoring.</li>
+        <li>Integrated computer vision models to detect <strong>Vehicle Detection, ANPR Detection, trespassing, Human detection and safety violations</strong>, enabling automated security monitoring with real-time alerts.</li>
+      </ul>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section-title"><i class="fas fa-trophy"></i> Achievements</div>
+    <ul class="achievement-list">
+      <li>Achieved <strong>consecutive A-band performance ratings (4+/5)</strong> for consistently delivering high-quality enterprise automation solutions and exceeding performance expectations.</li>
+      <li>Received the <strong>Star of the Month</strong>, <strong>On-the-Spot Award</strong>, and <strong>Elevate Wings Award</strong> for technical excellence, innovation, and continuous upskilling in Java and Spring Boot.</li>
+      <li>Earned the <strong>Best Team Award</strong> and received multiple customer recognitions for successful project delivery, technical leadership, and client satisfaction.</li>
+    </ul>
+
+    <!-- footer note (preserves spacing) -->
+    <div style="margin-top: 1.8rem; font-size: 0.75rem; text-align: center; color: #6a7f9b; border-top: 1px solid #dce5ef; padding-top: 1rem;">
+      <i class="fas fa-print" style="margin-right: 6px;"></i> Rajkumar Kumbhargave · portfolio
+    </div>
+
+  </div>
+
+  <!-- minimal JS (console + interactive touch) -->
+  <script>
+    (function() {
+      console.log('🚀 Rajkumar Kumbhargave · portfolio loaded');
+      
+      // Optional: make email click log a friendly message
+      const emailLink = document.querySelector('a[href^="mailto:"]');
+      if (emailLink) {
+        emailLink.addEventListener('click', function(e) {
+          console.log('📧 Email: rajkumarkumbhargave07@gmail.com');
+        });
+      }
+
+      // LinkedIn link (just a small feedback)
+      const linkedinLink = document.querySelector('a[href*="linkedin.com/in/rajkumar-kumbhargave"]');
+      if (linkedinLink) {
+        linkedinLink.addEventListener('click', function() {
+          console.log('🔗 LinkedIn profile opened');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
